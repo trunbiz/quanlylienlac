@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Gym Store | Blog')
+@section('title','Render | Blog')
 @section('main')
     <div class="main wrap container">
         <div class="ts-row cf">
@@ -35,7 +35,7 @@
                     <div class="post-meta">
 		<span class="posted-by">By
 			<span class="reviewer" itemprop="author"><a href="https://blog.ferosh.vn/author/hanhntn/"
-                                                        title="Posts by Ferosh Lady" rel="author">Gym Store Lady</a></span>
+                                                        title="Posts by Ferosh Lady" rel="author">Render Lady</a></span>
 		</span>
 
                         <span class="posted-on">on<span class="dtreviewed">

@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Gym Store | Thế giới Gym Store')
+@section('title','Render | Thế giới Render')
 @section('main')
     <script type="text/javascript">
         var route = "sanpham.blade.php";
@@ -10,20 +10,20 @@
             <div class="container">
                 <div class="slider-carousel owl-carousel owl-theme">
                     <a href="bo-suu-tap/thoi-trang-tre.html">
-                        <img class="owl-lazy" data-src="images/gym/banner_1.jpg" data-srcset="images/banner1.jpeg"
-                             sizes="50vw" alt="Gym Store - Thiết bị tập gym"/>
+                        <img class="owl-lazy" data-src="images/banner1.jpeg" data-srcset="images/banner1.jpeg"
+                             sizes="50vw" alt="Render - Thời trang thiết kế cao cấp"/>
                     </a>
                     <a href="bo-suu-tap/dong-gia.html">
-                        <img class="owl-lazy" data-src="images/gym/banner_2.jpg" data-srcset="images/banner2.jpg"
-                             sizes="50vw" alt="Gym Store - Thiết bị tập gym"/>
+                        <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
+                             sizes="50vw" alt="Render - Thời trang thiết kế cao cấp"/>
                     </a>
                     <a href="sale.html">
-                        <img class="owl-lazy" data-src="images/gym/banner_3.jpg" data-srcset="images/banner3.jpg"
-                             sizes="50vw" alt="Gym Store - Thiết bị tập gym"/>
+                        <img class="owl-lazy" data-src="images/banner3.jpg" data-srcset="images/banner3.jpg"
+                             sizes="50vw" alt="Render - Thời trang thiết kế cao cấp"/>
                     </a>
                     <a href="bo-suu-tap/my-pham-02.html">
-                        <img class="owl-lazy" data-src="images/gym/banner_2.jpg" data-srcset="images/banner2.jpg"
-                             sizes="50vw" alt="Gym Store - Thiết bị tập gym"/>
+                        <img class="owl-lazy" data-src="images/banner2.jpg" data-srcset="images/banner2.jpg"
+                             sizes="50vw" alt="Render - Thời trang thiết kế cao cấp"/>
                     </a>
                 </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="text-center mtb-30">
                     <h3>
-                        <span class="upcase up-case box-title">MÁY CHẠY BỘ</span>
+                        <span class="upcase up-case box-title">SẢN PHẨM B&Aacute;N CHẠY</span>
                     </h3>
                 </div>
                 <!-------------------------------- slide show ------------------->
@@ -88,38 +88,38 @@
                 <div class="row">
                     <div class="col-md-6 col-xs-12 col-sm-6">
                         <a href="{{asset('product')}}">
-                            <img src="{{asset('public/images/gym/slide_1.jpg')}}"
+                            <img src="{{asset('public/images/sp-qc1.jfif')}}"
                                  style="width: 100%" class="lazyload"/>
                         </a>
 
                         <div class="text-left">
-                            <a href="{{asset('product')}}" title="THỜI TRANG Gym Store - ĐỒNG GI&Aacute; CHỈ TỪ 149K">
+                            <a href="{{asset('product')}}" title="THỜI TRANG Render - ĐỒNG GI&Aacute; CHỈ TỪ 149K">
                                 <h3 style="margin-top: 10px; margin-bottom: 10px;">
-                                    <span class="upcase up-case box-title-nondecoration">THỜI TRANG Gym Store - ĐỒNG GI&Aacute; CHỈ TỪ 149K</span>
+                                    <span class="upcase up-case box-title-nondecoration">THỜI TRANG Render - ĐỒNG GI&Aacute; CHỈ TỪ 149K</span>
                                 </h3>
                             </a>
                             <h5 class="box-description-non-padding-bottom" style="line-height: 18px;">
                                 <span>To&agrave;n bộ thiết kế thời thượng đến từ thương hiệu thời trang cao cấp Elise đồng gi&aacute; chỉ từ 149K - 549K <a
                                             href="nha-thiet-ke/elise.html"
-                                            title="THỜI TRANG Gym Store - ĐỒNG GI&Aacute; CHỈ TỪ 149K"
+                                            title="THỜI TRANG Render - ĐỒNG GI&Aacute; CHỈ TỪ 149K"
                                             style="text-decoration:underline;"><strong>MUA NGAY</strong></a></span>
                             </h5>
                         </div>
                     </div>
                     <div class="col-md-6 col-xs-12 col-sm-6">
                         <a href="{{asset('product')}}">
-                            <img src="{{asset('public/images/gym/slide_2.jpg')}}"
+                            <img src="{{asset('public/images/sp-qc2.jfif')}}"
                                  style="width: 100%" class="lazyload"/>
                         </a>
 
                         <div class="text-left">
                             <a href="{{asset('product')}}" title="BST GI&Agrave;Y: SALE UP TO 50%">
                                 <h3 style="margin-top: 10px; margin-bottom: 10px;">
-                                    <span class="upcase up-case box-title-nondecoration">Tăng cơ khủng: SALE UP TO 50%</span>
+                                    <span class="upcase up-case box-title-nondecoration">BST GI&Agrave;Y: SALE UP TO 50%</span>
                                 </h3>
                             </a>
                             <h5 class="box-description-non-padding-bottom" style="line-height: 18px;">
-                                <span>100+ nước tăng lực <a
+                                <span>100+ mẫu gi&agrave;y cao g&oacute;t, gi&agrave;y bệt được thiết kế bằng chất liệu da cao cấp n&acirc;ng niu bước đi của n&agrave;ng <a
                                             href="bo-suu-tap/giay-2020.html" title="BST GI&Agrave;Y: SALE UP TO 50%"
                                             style="text-decoration:underline;"><strong>MUA NGAY</strong></a></span>
                             </h5>
@@ -127,7 +127,7 @@
                     </div>
                     <div class="col-md-6 col-xs-12 col-sm-6">
                         <a href="{{asset('product')}}">
-                            <img src="{{asset('public/images/gym/slide_3.jpg')}}"
+                            <img src="{{asset('public/images/sp-qc3.jfif')}}"
                                  style="width: 100%" class="lazyload"/>
                         </a>
 
@@ -154,7 +154,7 @@
             <div class="container">
                 <div class="text-center mtb-30">
                     <h3>
-                        <span class="upcase up-case box-title">XE ĐẠP TẬP</span>
+                        <span class="upcase up-case box-title">H&Agrave;NG MỚI</span>
                     </h3>
                 </div>
                 <div class="row prod_bestsale">
@@ -239,7 +239,7 @@
             <div class="container">
                 <div class="text-center mtb-30">
                     <h3>
-                        <span class="upcase up-case box-title">GHẾ MASSAGE</span>
+                        <span class="upcase up-case box-title">Dành riêng cho bạn</span>
                     </h3>
                 </div>
 

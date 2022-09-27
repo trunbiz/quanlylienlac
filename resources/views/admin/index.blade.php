@@ -1,5 +1,5 @@
 @extends('admin.Base')
-@section('title','Gym Store | Quản trị website')
+@section('title','Render | Quản trị website')
 @section('main')
 		<div class="row">
 			<ol class="breadcrumb">

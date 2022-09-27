@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Gym Store | Thế giới thời trang Gym Store')
+@section('title','Render | Thế giới thời trang Render')
 @section('main')
     <div class="box-content">
         <input type="hidden" id="txtRouteId" value="4"/>

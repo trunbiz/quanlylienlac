@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Gym Store | Thế giới thời trang Gym Store')
+@section('title','Render | Thế giới thời trang Render')
 @section('main')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="content-area home-content-area top-area">
@@ -134,7 +134,7 @@
                         <li class="collapse-toogle">
                             <div class="upcase">Chính sách đổi trả</div>
                             <div class="content">
-                                GYM STORE chấp nhận đổi/trả hàng trong thời gian 03 ngày làm việc, áp dụng không đồng đều
+                                Render chấp nhận đổi/trả hàng trong thời gian 03 ngày làm việc, áp dụng không đồng đều
                                 đối với từng mặt hàng và sản phẩm khác nhau. Quý khách vui lòng kiểm tra chi tiết về
                                 chính sách đổi và trả hàng theo link.
                                 <div class="text-right margin-top10"><a class="view-all"
@@ -146,7 +146,7 @@
                             <div class="upcase">Chính sách giao hàng</div>
                             <div class="content">
                                 Đơn hàng sẽ được giao cho Quý khách trong vòng 07 - 10 ngày làm việc kể từ ngày đặt đơn.
-                                Quý khách có thể liên hệ với GYM STORE qua Email, Điện thoại, Facebook để được biết về lộ
+                                Quý khách có thể liên hệ với Render qua Email, Điện thoại, Facebook để được biết về lộ
                                 trình đơn hàng của mình . Chi tiết về chính sách giao hàng Quý khách vui lòng click vào
                                 link.
                                 <div class="text-right margin-top10"><a class="view-all"
@@ -157,7 +157,7 @@
                         <li class="collapse-toogle">
                             <div class="upcase">Chính sách thanh toán</div>
                             <div class="content">
-                                GYM STORE cung cấp 4 hình thức thanh toán cho quý khách: Thanh toán khi nhận hàng (COD),
+                                Render cung cấp 4 hình thức thanh toán cho quý khách: Thanh toán khi nhận hàng (COD),
                                 Chuyển khoản, Thanh toán qua thẻ tín dụng, Thanh toán qua thẻ ATM.
                                 <div class="text-right margin-top10"><a class="view-all"
                                                                         href="https://ferosh.vn/chinh-sach-thanh-toan.html">Xem

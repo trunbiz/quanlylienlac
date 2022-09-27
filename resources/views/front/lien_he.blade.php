@@ -15,7 +15,7 @@
                         <img src="{{asset('public/images/gym/gioi-thieu.jpg')}}">
                     </div>
                     <div class="col-sm-6">
-                        <h3>GYM STORE VIỆT NAM</h3>
+                        <h3>Render VIỆT NAM</h3>
                         <p>Nếu bạn có thắc mắc về dịch vụ của chúng tôi hoặc cần trợ giúp với doanh nghiệp của bạn, vui lòng liên hệ với chúng tôi.</p>
                         <h3>LIÊN HỆ</h3>
                         <ul>

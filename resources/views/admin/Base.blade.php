@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gym Store - Quản trị website</title>
+    <title>Render - Quản trị website</title>
     <base href="{{asset('public/admin')}}/" />
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -28,7 +28,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{asset('/')}}">Gym Store</a>
+            <a class="navbar-brand" href="{{asset('/')}}">Render</a>
         </div>
     </div><!-- /.container-fluid -->
 </nav>
@@ -50,15 +50,15 @@
                             class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>@endif
         <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><i
                         class="fa fa-address-card-o"></i> Profile</a></li>
-        @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><i
-                            class="fa fa-cubes" aria-hidden="true"></i> Product</a></li>@endif
-        @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin/blog')) ? 'active' : '' }}"><a href="{{asset('admin/blog')}}"><i
-                            class="fa fa-rss-square" aria-hidden="true"></i> Blog</a></li>@endif
-        @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin/cart')) ? 'active' : '' }}"><a href="{{asset('admin/cart')}}"><i
-                            class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>@endif
+        {{--@if(Auth::user()->lever == 0)--}}
+            {{--<li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><i--}}
+                            {{--class="fa fa-cubes" aria-hidden="true"></i> Product</a></li>@endif--}}
+        {{--@if(Auth::user()->lever == 0)--}}
+            {{--<li class="{{ (request()->is('admin/blog')) ? 'active' : '' }}"><a href="{{asset('admin/blog')}}"><i--}}
+                            {{--class="fa fa-rss-square" aria-hidden="true"></i> Blog</a></li>@endif--}}
+        {{--@if(Auth::user()->lever == 0)--}}
+            {{--<li class="{{ (request()->is('admin/cart')) ? 'active' : '' }}"><a href="{{asset('admin/cart')}}"><i--}}
+                            {{--class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>@endif--}}
         @if(Auth::user()->lever == 0)
             <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
                     <em class="fa fa-navicon">&nbsp;</em> Option <span data-toggle="collapse" href="#sub-item-1"

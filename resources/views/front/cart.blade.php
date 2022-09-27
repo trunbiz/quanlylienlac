@@ -92,9 +92,9 @@
                                 <div class="row box-gray">
                                     <div class="col-xs-12">
                                         <p class="title">Khách hàng mới</p>
-                                        <p>Trở thành thành viên của Gym Store nhận các tin tức thời trang trong nước và
+                                        <p>Trở thành thành viên của Render nhận các tin tức thời trang trong nước và
                                             quốc tế, các chương
-                                            trình khuyến mại duy nhất chỉ dành cho các thành viên của Gym Store hay là
+                                            trình khuyến mại duy nhất chỉ dành cho các thành viên của Render hay là
                                             những người đầu tiên
                                             được thông báo khi có sản phẩm thiết kế mới. Bạn còn chờ gì nữa?</p>
                                         <p>*Thông tin bắt buộc</p>

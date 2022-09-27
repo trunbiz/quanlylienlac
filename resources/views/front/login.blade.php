@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Đăng nhập | Thời trang cao cấp Gym Store')
+@section('title','Đăng nhập | Thời trang cao cấp Render')
 @section('main')
     <div class="content-area home-content-area top-area">
         <div class="container">
@@ -21,7 +21,7 @@
                         {{ csrf_field() }}
                         <div class="col-md-9">
                             <p class="title">KHÁCH HÀNG ĐÃ CÓ TÀI KHOẢN</p>
-                            <p>Nếu bạn đã có tài khoản tại Gym Store, vui lòng đăng nhập tại đây.<br>
+                            <p>Nếu bạn đã có tài khoản tại Render, vui lòng đăng nhập tại đây.<br>
                                 Chú ý: Nếu bạn mới chỉ đăng ký theo dõi bản tin hàng tuần mà vẫn chưa đăng ký tài khoản
                                 thành viên, vui lòng đăng ký bên dưới.</p>
 
@@ -42,7 +42,7 @@
                 <div class="row box-gray relative">
                     <div class="col-md-9">
                         <p class="title">BẠN CHƯA ĐĂNG KÝ TÀI KHOẢN?</p>
-                        <p>Nếu bạn mới đến Gym Store, vui lòng chọn “ĐĂNG KÝ NGAY”</p>
+                        <p>Nếu bạn mới đến Render, vui lòng chọn “ĐĂNG KÝ NGAY”</p>
                     </div>
                     <a href="{{asset('register')}}">
                         <button class="btn btn-black" type="button" style="min-width: 184px;">ĐĂNG KÝ NGAY</button>
