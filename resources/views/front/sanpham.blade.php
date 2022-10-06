@@ -43,9 +43,8 @@
                                     <div class="product-type">
                                         <ul>
                                             <li><a href="{{asset('search/Sale')}}">SALE</a></li>
-                                            <li><a href="{{asset('search/Máy chạy bộ')}}">MÁY CHẠY BỘ</a></li>
-                                            <li><a href="{{asset('search/Xe đạp tập')}}">XE ĐẠP TẬP</a></li>
-                                            <li><a href="{{asset('search/Dụng cụ tập Gym')}}">DỤNG CỤ TẬP GYM</a></li>
+                                            <li><a href="{{asset('search/Thẻ in tên')}}">THẺ IN TÊN</a></li>
+                                            <li><a href="{{asset('search/Ponon')}}">PONON</a></li>
                                         </ul>
                                     </div>
                                     <div class="product-price" id="product-price-tab">
