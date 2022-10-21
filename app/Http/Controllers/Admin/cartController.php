@@ -13,6 +13,7 @@ class cartController extends Controller
     private $cart, $cart_product;
     public function __construct()
     {
+        return abort(404);
         $this->cart= new cartModel();
         $this->cart_product =new cart_productModel();
     }

@@ -23,16 +23,15 @@ Route::group(['namespace' => 'Front'], function () {
     Route::get('list-product-render-{id}', 'indexController@listProduct');
     Route::get('blog-{id}', 'indexController@blog');
     Route::group(['prefix' => 'cart'], function () {
-        return abort(404);
-//        Route::get('/', 'cartController@cartShow');
-//        Route::post('/', 'cartController@addItem');
-//        Route::get('delete/{id}', 'cartController@deleteItem');
-//        Route::get('pay', 'cartController@pay');
-//        Route::get('pay/online', 'cartController@payOnline');
-//        Route::post('pay/online', 'cartController@payOnlineSuccess');
-//        Route::post('pay', 'cartController@payPost');
-//        Route::get('detail/{id}', 'cartController@detail');
-//        Route::get('detail-star/{id}/{star}', 'cartController@detailStar');
+        Route::get('/', 'cartController@cartShow');
+        Route::post('/', 'cartController@addItem');
+        Route::get('delete/{id}', 'cartController@deleteItem');
+        Route::get('pay', 'cartController@pay');
+        Route::get('pay/online', 'cartController@payOnline');
+        Route::post('pay/online', 'cartController@payOnlineSuccess');
+        Route::post('pay', 'cartController@payPost');
+        Route::get('detail/{id}', 'cartController@detail');
+        Route::get('detail-star/{id}/{star}', 'cartController@detailStar');
     });
     // Đơn hàng đã đặt
     Route::get('order-placed', 'cartController@orderPlaced');
@@ -77,11 +76,10 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('delete/{id}', 'blogController@deleteItem');
         });
         Route::group(['prefix' => 'cart'], function () {
-            return abort(404);
-//            Route::get('/', 'cartController@listAll');
-//            Route::get('delete/{id}', 'cartController@deleteItem');
-//            Route::get('detail/{id}', 'cartController@detailItem');
-//            Route::get('update/{id}/{status}', 'cartController@updateStatus');
+            Route::get('/', 'cartController@listAll');
+            Route::get('delete/{id}', 'cartController@deleteItem');
+            Route::get('detail/{id}', 'cartController@detailItem');
+            Route::get('update/{id}/{status}', 'cartController@updateStatus');
         });
     });
 
