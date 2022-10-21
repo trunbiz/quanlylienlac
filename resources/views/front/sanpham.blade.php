@@ -9,7 +9,7 @@
             <div class="container">
                 <div class="banner relative">
                     <a href="hang-moi.html" target="_blank">
-                        <img class="lazyload" data-src="{{asset('public/images/Render/banner_3.jpg')}}">
+                        <img class="lazyload" data-src="{{asset('public/images/banner3.jpg')}}">
                         <div class="banner_body center">
                             <div class="upcase banner_header"></div>
                             <div class="banner_description text-justify"></div>
@@ -43,9 +43,9 @@
                                     <div class="product-type">
                                         <ul>
                                             <li><a href="{{asset('search/Sale')}}">SALE</a></li>
-                                            <li><a href="{{asset('search/Máy chạy bộ')}}">MÁY CHẠY BỘ</a></li>
-                                            <li><a href="{{asset('search/Xe đạp tập')}}">XE ĐẠP TẬP</a></li>
-                                            <li><a href="{{asset('search/Dụng cụ tập Render')}}">DỤNG CỤ TẬP Render</a></li>
+                                            <li><a href="{{asset('search/Sản phẩm bán chạy')}}">SẢN PHẨM BÁN CHẠY</a></li>
+                                            <li><a href="{{asset('search/Hàng mới')}}">HÀNG MỚI</a></li>
+                                            <li><a href="{{asset('search/Dành riêng cho bạn')}}">DÀNH RIÊNG CHO BẠN</a></li>
                                         </ul>
                                     </div>
                                     <div class="product-price" id="product-price-tab">
