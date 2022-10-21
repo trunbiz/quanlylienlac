@@ -175,8 +175,8 @@
                                     <p>
                                         <a href="{{asset('cart/pay')}}"
                                            class="btn btn-black btn--modal-login" type="button">Thanh toán</a>
-                                        <a href="{{asset('cart/pay/online')}}"
-                                           class="btn btn-black btn--modal-login" type="button">Thanh toán online</a>
+                                        {{--<a href="{{asset('cart/pay/online')}}"--}}
+                                           {{--class="btn btn-black btn--modal-login" type="button">Thanh toán online</a>--}}
                                     </p>
                                 </div>
                             @endif

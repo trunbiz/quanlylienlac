@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ce4fa828-5c07-47a7-9bd9-b1d9b62fcd60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php" afterDir="false" />
-    </list>
+    <list default="true" id="ce4fa828-5c07-47a7-9bd9-b1d9b62fcd60" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +25,13 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="example" value="2" />
-          <entry key="php" value="7" />
+          <entry key="php" value="8" />
           <entry key="png" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Blade" value="4" />
+          <entry key="Blade" value="5" />
           <entry key="Image" value="1" />
           <entry key="PHP" value="3" />
           <entry key="PLAIN_TEXT" value="2" />
@@ -107,11 +104,20 @@
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+            <state relative-caret-position="272">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/front/cart.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="237">
+              <caret line="173" column="96" lean-forward="true" selection-start-line="173" selection-start-column="96" selection-end-line="173" selection-end-column="96" />
             </state>
           </provider>
         </entry>
@@ -128,6 +134,7 @@
       <find>GHẾ MASSAGE</find>
       <find>Dụng cụ</find>
       <find>Ponon</find>
+      <find>Thanh toán</find>
     </findStrings>
     <replaceStrings>
       <replace>Render</replace>
@@ -147,6 +154,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/Base.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/front/sanpham.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php" />
+        <option value="$PROJECT_DIR$/resources/views/front/cart.blade.php" />
       </list>
     </option>
   </component>
@@ -348,12 +356,12 @@
       <workItem from="1663776735242" duration="586000" />
       <workItem from="1664295802826" duration="2533000" />
       <workItem from="1665073613412" duration="838000" />
-      <workItem from="1666325880085" duration="11000" />
+      <workItem from="1666325880085" duration="631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3968000" />
+    <option name="totallyTimeSpent" value="4588000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
@@ -455,8 +463,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Front/indexController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="41" lean-forward="true" selection-start-line="34" selection-start-column="41" selection-end-line="34" selection-end-column="41" />
+        <state relative-caret-position="272">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/front/cart.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="237">
+          <caret line="173" column="96" lean-forward="true" selection-start-line="173" selection-start-column="96" selection-end-line="173" selection-end-column="96" />
         </state>
       </provider>
     </entry>
