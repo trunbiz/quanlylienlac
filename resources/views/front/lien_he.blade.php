@@ -12,7 +12,7 @@
                 </center>
                 <div class="row">
                     <div class="col-sm-6">
-                        <img src="{{asset('public/images/gym/gioi-thieu.jpg')}}">
+                        <img src="{{asset('public/images/Render/gioi-thieu.jpg')}}">
                     </div>
                     <div class="col-sm-6">
                         <h3>Render VIỆT NAM</h3>
