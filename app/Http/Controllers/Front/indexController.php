@@ -32,8 +32,8 @@ class indexController extends Controller
         $data['items4']=$this->product->searchCategoryProduct('SẢN PHẨM');
         $data['items5']=$this->product->searchCategoryProduct('DÀNH RIÊNG CHO BẠN');
         $data['itemsBlog']=$this->blog->listAll();
-//        return view('front.index',$data);
-        return redirect('admin');
+        return view('front.index',$data);
+//        return redirect('admin');
     }
     public function searchItem($search)
     {
