@@ -21,7 +21,6 @@ class cartController extends Controller
     private $cartItem,$product,$cart,$cart_product,$user;
     public function __construct()
     {
-        return abort(404);
         $this->cartItem = app(Cart::class);
         $this->product= new productModel();
         $this->cart= new cartModel();

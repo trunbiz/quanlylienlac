@@ -39,15 +39,13 @@ class indexController extends Controller
     {
         $search= str_replace(' ', '%', $search);
         $data['items']=$this->product->searchItem($search);
-        abort(404);
-//        return view('front.sanpham',$data);
+        return view('front.sanpham',$data);
     }
     public function getsearch(Request $request)
     {
         $key= str_replace(' ', '%', $request->search);
         $data['items']=$this->product->searchItem($key);
-        abort(404);
-//        return view('front.sanpham',$data);
+        return view('front.sanpham',$data);
     }
 
     public function productDetail($id)
