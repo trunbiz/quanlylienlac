@@ -1,6 +1,19 @@
 @extends('front.Base')
 @section('title','Giỏ hàng')
 @section('main')
+    <script type="text/javascript">
+        function checkCoupon() {
+            var coupon_code = $('.coupon_code').val();
+            $.get(
+                '{{url('admin/coupons/update')}}',
+                {id: id, title: titlecate, describe: describecate, status: statuscate},
+                function () {
+                    location.reload();
+                }
+            );
+        }
+
+    </script>
     <div class="box-content">
         <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
         <link rel="stylesheet" type="text/css" href="css/pages/cart02dc.css?v=1575887765">
@@ -33,6 +46,7 @@
                                     <?php $total = 0; ?>
                                     @foreach($items as $item)
                                         <tr class="clear-border product-info-custom">
+                                            <td style="display: none"> <input type="hidden" class="rowId" name="rowId" value="{{$item->rowId}}"></td>
                                             <td><img class="lazyload"
                                                      data-src="{{asset('public/media/'.$item->options->img)}}"
                                                      src="{{asset('public/media/'.$item->options->img)}}">
@@ -65,7 +79,7 @@
                                         <tr class="delete-item">
                                             <td colspan="7" class="text-right">
                                                 <a href="{{asset('cart/delete/'.$item->rowId)}}"
-                                                   class="icon icon-trash delete-cart">Xóa</a>
+                                                   class="icon icon-trash">Xóa</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -78,9 +92,31 @@
                                         <div class="col-md-6 col-xs-12 order-report">
                                             <ul>
                                                 <li class="collapse-toogle1">
+                                                    <form id="myForm" role="form" method="get"
+                                                          action="{{ url('/cart') }}">
+                                                        <span class="upcase">Mã giảm giá</span>
+                                                        <input class="form-control" placeholder="coupon code"
+                                                               name="coupon_code"
+                                                               style="width: 50%; display: inline-block;">
+                                                        <button
+                                                                class="btn btn-black btn--modal-login">Kiểm tra
+                                                        </button>
+                                                    </form>
+                                                    @if(isset($coupon_error))
+                                                        <p style="color: red">{{$coupon_error}}</p>
+                                                    @endif
+                                                </li>
+                                                @if(isset($discount_amount))
+                                                    <li class="collapse-toogle1">
+                                                        <span class="upcase">Giảm giá</span>
+                                                        <span class="float-r bold subtotal"
+                                                              id="discountAmount">- {{$discount_amount}} VND</span>
+                                                    </li>
+                                                @endif
+                                                <li class="collapse-toogle1">
                                                     <span class="upcase">Tổng tiền</span>
                                                     <span class="float-r bold subtotal" id="subtotal"
-                                                          subtotal="798000">{{$total}} VND</span>
+                                                          subtotal="798000">{{$total - ($discount_amount ?? 0)}} VND</span>
                                                 </li>
                                             </ul>
                                         </div>
@@ -176,7 +212,7 @@
                                         <a href="{{asset('cart/pay')}}"
                                            class="btn btn-black btn--modal-login" type="button">Thanh toán</a>
                                         {{--<a href="{{asset('cart/pay/online')}}"--}}
-                                           {{--class="btn btn-black btn--modal-login" type="button">Thanh toán online</a>--}}
+                                        {{--class="btn btn-black btn--modal-login" type="button">Thanh toán online</a>--}}
                                     </p>
                                 </div>
                             @endif

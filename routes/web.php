@@ -45,6 +45,8 @@ Route::group(['namespace' => 'Front'], function () {
         return view('front.lien_he');
     });
 });
+
+// URL admin
 Route::group(['namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'admin', 'middleware' => 'checklogin'], function () {
         Route::get('/', 'indexController@indexShow');
@@ -80,6 +82,12 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('delete/{id}', 'cartController@deleteItem');
             Route::get('detail/{id}', 'cartController@detailItem');
             Route::get('update/{id}/{status}', 'cartController@updateStatus');
+        });
+        Route::group(['prefix' => 'coupons'], function (){
+           Route::get('/', 'CouponController@index');
+           Route::post('/', 'CouponController@storeItem');
+           Route::post('update', 'CouponController@updateItem');
+           Route::get('delete/{id}', 'CouponController@deleteItem');
         });
     });
 

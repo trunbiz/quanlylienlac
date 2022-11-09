@@ -151,7 +151,7 @@
         }
     </style>
     <script type="text/javascript">
-        var siteUrl = "index.html";
+        var siteUrl = "{{ url('')}}";
     </script>
 </head>
 

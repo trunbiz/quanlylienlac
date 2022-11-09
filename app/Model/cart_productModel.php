@@ -23,6 +23,7 @@ class cart_productModel extends Model
             $item->pricesale=$request['pricesale'];
             $item->size=$request['size'];
             $item->color=$request['color'];
+            $item->coupon_id=$request['coupon_id'];
             $item->save();
         }
         catch (Exception $ex){
