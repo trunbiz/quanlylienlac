@@ -90,15 +90,14 @@ class cartController extends Controller
             $total += $item->price * $item->weight;
         }
         if (Auth::check()) {
-            $idcart = $this->cart->addItem(Auth::user()->id, $total - ($this->discountAmount ?? 0), 1, $pay);
+            $idcart = $this->cart->addItem(Auth::user()->id, $total - ($this->discountAmount ?? 0), 1, $pay, $this->couponId ?? null);
             foreach ($data as $item) {
                 $cart_product = array('idcart' => $idcart,
                     'idproduct' => $item->id,
                     'countsale' => $item->qty,
                     'pricesale' => $item->price,
                     'size' => $item->options->size,
-                    'color' => $item->options->color,
-                    'coupon_id' => $this->couponId ?? null
+                    'color' => $item->options->color
                 );
                 $this->cart_product->addItem($cart_product);
             }

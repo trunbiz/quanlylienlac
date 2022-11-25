@@ -14,7 +14,7 @@ class cartModel extends Model
         $item=cartModel::orderBy('created_at','DESC')->get();
         return $item;
     }
-    public function addItem($iduser,$total,$status, $pay=null)
+    public function addItem($iduser,$total,$status, $pay=null, $coupon_id = null)
     {
         try{
             $item= new cartModel();
@@ -22,6 +22,7 @@ class cartModel extends Model
             $item->total=$total;
             $item->status=$status;
             $item->pay=$pay;
+            $item->coupon_id=$coupon_id;
             $item->save();
             return $item->id;
         }

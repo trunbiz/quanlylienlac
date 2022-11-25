@@ -257,9 +257,6 @@
                                     <li class=" " id="collection">
                                         <a href="{{asset('search/Bộ sưu tập')}}" id="collection_href">Bộ sưu tập</a>
                                     </li>
-                                    <li class=" " id="designer">
-                                        <a href="{{asset('search/SALE')}}" id="designer_href">Nh&agrave; thiết kế</a>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
