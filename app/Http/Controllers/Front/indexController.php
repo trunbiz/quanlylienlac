@@ -26,7 +26,9 @@ class indexController extends Controller
     }
     public function indexShow()
     {
-        $data['items1']=$this->product->searchCategoryProduct('SẢN PHẨM BÁN CHẠY');
+        $data['items1']=$this->product->searchC
+
+        ategoryProduct('SẢN PHẨM BÁN CHẠY');
         $data['items2']=$this->product->searchCategoryProduct('HÀNG MỚI');
         $data['items3']=$this->product->searchCategoryProduct('PHONG CÁCH');
         $data['items4']=$this->product->searchCategoryProduct('SẢN PHẨM');
