@@ -1,5 +1,5 @@
 @extends('front.Base')
-@section('title','Render | Thế giới thời trang Render')
+@section('title','Quản lý liên lạc')
 @section('main')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="content-area home-content-area top-area">

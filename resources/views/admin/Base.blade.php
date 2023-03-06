@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Render - Quản trị website</title>
+    <title>Quản lý liên lạc</title>
     <base href="{{asset('public/admin')}}/"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span></button>
-            <a class="navbar-brand" href="{{asset('/')}}">Render</a>
+            <a class="navbar-brand" href="{{asset('/')}}">Quản lý liên lạc</a>
         </div>
     </div><!-- /.container-fluid -->
 </nav>
@@ -50,31 +50,31 @@
     <ul class="nav menu">
         @if(Auth::user()->lever == 0)
             <li class="{{ (request()->is('admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em
-                            class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>@endif
+                            class="fa fa-dashboard">&nbsp;</em> Quản lý liên lạc</a></li>@endif
         <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><i
-                        class="fa fa-address-card-o"></i> Profile</a></li>
-        @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><i
-                            class="fa fa-cubes" aria-hidden="true"></i> Product</a></li>@endif
-        @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin/blog')) ? 'active' : '' }}"><a href="{{asset('admin/blog')}}"><i
-                            class="fa fa-rss-square" aria-hidden="true"></i> Blog</a></li>@endif
-        @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin/cart')) ? 'active' : '' }}"><a href="{{asset('admin/cart')}}"><i
-                            class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>@endif
+                        class="fa fa-address-card-o"></i> Thông tin cá nhân</a></li>
+        {{--@if(Auth::user()->lever == 0)--}}
+            {{--<li class="{{ (request()->is('admin/product')) ? 'active' : '' }}"><a href="{{asset('admin/product')}}"><i--}}
+                            {{--class="fa fa-cubes" aria-hidden="true"></i> Product</a></li>@endif--}}
+        {{--@if(Auth::user()->lever == 0)--}}
+            {{--<li class="{{ (request()->is('admin/blog')) ? 'active' : '' }}"><a href="{{asset('admin/blog')}}"><i--}}
+                            {{--class="fa fa-rss-square" aria-hidden="true"></i> Blog</a></li>@endif--}}
+        {{--@if(Auth::user()->lever == 0)--}}
+            {{--<li class="{{ (request()->is('admin/cart')) ? 'active' : '' }}"><a href="{{asset('admin/cart')}}"><i--}}
+                            {{--class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>@endif--}}
         @if(Auth::user()->lever == 0)
             <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
-                    <em class="fa fa-navicon">&nbsp;</em> Option <span data-toggle="collapse" href="#sub-item-1"
+                    <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1"
                                                                        class="icon pull-right"><em
                                 class="fa fa-plus"></em></span>
                 </a>
                 <ul class="children collapse" id="sub-item-1">
-                    <li class="{{ (request()->is('admin/category')) ? 'active' : '' }}"><a
-                                href="{{asset('admin/category')}}"><span class="fa fa-arrow-right">&nbsp;</span>
-                            Category</a></li>
-                    <li class="{{ (request()->is('admin/coupons')) ? 'active' : '' }}"><a
-                                href="{{asset('admin/coupons')}}"><span class="fa fa-arrow-right">&nbsp;</span>
-                            Coupons</a></li>
+                    {{--<li class="{{ (request()->is('admin/category')) ? 'active' : '' }}"><a--}}
+                                {{--href="{{asset('admin/category')}}"><span class="fa fa-arrow-right">&nbsp;</span>--}}
+                            {{--Category</a></li>--}}
+                    {{--<li class="{{ (request()->is('admin/coupons')) ? 'active' : '' }}"><a--}}
+                                {{--href="{{asset('admin/coupons')}}"><span class="fa fa-arrow-right">&nbsp;</span>--}}
+                            {{--Coupons</a></li>--}}
                 </ul>
             </li>
         @endif

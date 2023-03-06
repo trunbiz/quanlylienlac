@@ -15,7 +15,9 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
+            $table->integer('group_id')->nullable();
             $table->string('username')->nullable();
+            $table->string('full_name')->nullable();
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('city')->nullable();
@@ -24,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->integer('lever')->nullable();
             $table->rememberToken()->nullable();
             $table->integer('status')->nullable();
-            $table->text('img')->nullable();
+            $table->text('avatar')->nullable();
             $table->timestamps();
         });
     }

@@ -31,7 +31,7 @@ class indexController extends Controller
     }
     public function showLogin()
     {
-        return view('front.login');
+        return view('admin.login');
     }
     public function checkLogin(Request $request)
     {
