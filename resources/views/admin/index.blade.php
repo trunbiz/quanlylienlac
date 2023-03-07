@@ -18,15 +18,12 @@
     <div class="row">
         <div class="container">
             <div class="panel panel-container container">
-                <form>
+                <form class="row" method="get" action="{{asset('admin/contacts')}}">
                     <div class="col-sm-3"><input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại"></div>
                     <div class="col-sm-3"><input type="text" class="form-control" id="fullname" name="fullname" placeholder="Tên"></div>
                     <div class="col-sm-3"></div>
-                    <div class="col-sm-3"><button type="button" class="btn btn-info">Tìm kiếm</button> <button type="button" class="btn btn-primary">Tạo mới</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-info">Tìm kiếm</button> <a href="{{asset('admin/contacts/store')}}" type="button" class="btn btn-primary">Tạo mới</a></div>
                 </form>
-                <br>
-                <hr>
-                <br>
                 <table class="table table-hover">
                     <thead>
                     <tr>

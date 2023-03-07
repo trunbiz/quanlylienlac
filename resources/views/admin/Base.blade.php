@@ -49,7 +49,7 @@
     <div class="divider"></div>
     <ul class="nav menu">
         @if(Auth::user()->lever == 0)
-            <li class="{{ (request()->is('admin')) ? 'active' : '' }}"><a href="{{asset('admin')}}"><em
+            <li class="{{ (request()->is('admin/contacts')) ? 'active' : '' }}"><a href="{{asset('admin/contacts')}}"><em
                             class="fa fa-dashboard">&nbsp;</em> Quản lý liên lạc</a></li>@endif
         <li class="{{ (request()->is('admin/profile')) ? 'active' : '' }}"><a href="{{asset('admin/profile')}}"><i
                         class="fa fa-address-card-o"></i> Thông tin cá nhân</a></li>
@@ -69,9 +69,9 @@
                                 class="fa fa-plus"></em></span>
                 </a>
                 <ul class="children collapse" id="sub-item-1">
-                    {{--<li class="{{ (request()->is('admin/category')) ? 'active' : '' }}"><a--}}
-                                {{--href="{{asset('admin/category')}}"><span class="fa fa-arrow-right">&nbsp;</span>--}}
-                            {{--Category</a></li>--}}
+                    <li class="{{ (request()->is('admin/teams')) ? 'active' : '' }}"><a
+                                href="{{asset('admin/teams')}}"><span class="fa fa-arrow-right">&nbsp;</span>
+                            Quản lý phòng ban </a></li>
                     {{--<li class="{{ (request()->is('admin/coupons')) ? 'active' : '' }}"><a--}}
                                 {{--href="{{asset('admin/coupons')}}"><span class="fa fa-arrow-right">&nbsp;</span>--}}
                             {{--Coupons</a></li>--}}

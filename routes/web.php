@@ -52,14 +52,32 @@ Route::group(['namespace' => 'Front'], function () {
 // URL admin
 Route::group(['namespace' => 'Admin'], function () {
     Route::group(['prefix' => 'admin', 'middleware' => 'checklogin'], function () {
-        Route::get('/', 'indexController@indexShow');
+//        Route::get('/', 'indexController@indexShow');
+        Route::get('/', function (){
+            return redirect('admin/contacts');
+        });
+
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', 'indexController@profileInfo');
             Route::post('/', 'indexController@profileUpdate');
         });
 
         Route::group(['prefix' => 'contacts'], function (){
-           //
+            Route::get('/', 'ContactController@index');
+            Route::get('store', 'ContactController@showStore');
+            Route::post('store', 'ContactController@store');
+            Route::get('edit', 'ContactController@showEdit');
+            Route::post('edit', 'ContactController@update');
+            Route::post('delete', 'ContactController@deleteItem');
+        });
+
+        Route::group(['prefix' => 'teams'], function (){
+            Route::get('/', 'TeamController@index');
+            Route::get('store', 'TeamController@showStore');
+            Route::post('store', 'TeamController@store');
+            Route::get('edit', 'TeamController@showEdit');
+            Route::post('update', 'TeamController@update');
+            Route::get('delete', 'TeamController@deleteItem');
         });
 
 //        Route::group(['prefix' => 'category'], function () {
