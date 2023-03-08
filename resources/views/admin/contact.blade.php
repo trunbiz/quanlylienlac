@@ -27,6 +27,7 @@
                         <button class="btn btn-info">Tìm kiếm</button>
                         <a href="{{asset('admin/contacts/store')}}" type="button" class="btn btn-primary">Tạo mới</a>
                         <button type="button" class="btn btn-primary" onclick="exportData()">Xuất excel</button>
+                        <a href="{{asset('admin/contacts/import')}}" class="btn btn-success">Import file</a>
                     </div>
                 </form>
                 <table class="table table-hover">

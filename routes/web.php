@@ -70,6 +70,9 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::post('update', 'ContactController@update');
             Route::get('delete', 'ContactController@deleteItem');
             Route::get('download', 'ContactController@downloadExcel');
+            Route::get('import', 'ContactController@showImport');
+            Route::get('template-import', 'ContactController@templateImport');
+            Route::post('import', 'ContactController@importFile');
         });
 
         Route::group(['prefix' => 'teams'], function (){
