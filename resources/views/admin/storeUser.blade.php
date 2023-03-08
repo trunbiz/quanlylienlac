@@ -27,21 +27,21 @@
             <li><a href="#">
                     <em class="fa fa-home"></em>
                 </a></li>
-            <li class="active">Blog/Profile</li>
+            <li class="active">Thông tin người dùng</li>
         </ol>
     </div><!--/.row-->
 
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Profile</h1>
+            <h1 class="page-header">Thông tin người dùng</h1>
         </div>
     </div><!--/.row-->
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Profile</div>
+                <div class="panel-heading">Thông tin người dùng</div>
                 <div class="panel-body">
-                    <form method="POST" role="form" enctype="multipart/form-data">
+                    <form method="POST" role="form" enctype="multipart/form-data" action="{{empty($item) ? asset('admin/users/store') : asset('admin/users/update')}}">
                         {{csrf_field()}}
                         <input class="form-control" placeholder="id" name="id" type="hidden"
                                value="{{isset($item->id)?$item->id:''}}">

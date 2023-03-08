@@ -81,6 +81,15 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('delete', 'TeamController@deleteItem');
         });
 
+        Route::group(['prefix' => 'users'], function (){
+            Route::get('/', 'UserController@index');
+            Route::get('store', 'UserController@showStore');
+            Route::post('store', 'UserController@store');
+            Route::get('edit', 'UserController@showEdit');
+            Route::post('update', 'UserController@update');
+            Route::get('delete', 'UserController@deleteItem');
+        });
+
 //        Route::group(['prefix' => 'category'], function () {
 //            Route::get('/', 'categoryController@listAll');
 //            Route::post('/', 'categoryController@addItem');

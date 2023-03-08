@@ -23,11 +23,10 @@
                                                  placeholder="Số điện thoại"></div>
                     <div class="col-sm-3"><input type="text" class="form-control" id="full_name" name="full_name"
                                                  placeholder="Tên"></div>
-                    <div class="col-sm-3"></div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-6" style="text-align: right">
                         <button class="btn btn-info">Tìm kiếm</button>
                         <a href="{{asset('admin/contacts/store')}}" type="button" class="btn btn-primary">Tạo mới</a>
-                        <button type="button" class="btn btn-info" onclick="exportData()">Xuất excel</button>
+                        <button type="button" class="btn btn-primary" onclick="exportData()">Xuất excel</button>
                     </div>
                 </form>
                 <table class="table table-hover">

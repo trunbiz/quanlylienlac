@@ -62,7 +62,7 @@
         {{--@if(Auth::user()->lever == 0)--}}
             {{--<li class="{{ (request()->is('admin/cart')) ? 'active' : '' }}"><a href="{{asset('admin/cart')}}"><i--}}
                             {{--class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>@endif--}}
-        @if(Auth::user()->lever == 0)
+        @if(Auth::user()->group_id == 1)
             <li class="parent "><a data-toggle="collapse" href="#sub-item-1">
                     <em class="fa fa-navicon">&nbsp;</em> Tùy chọn <span data-toggle="collapse" href="#sub-item-1"
                                                                        class="icon pull-right"><em
@@ -72,9 +72,9 @@
                     <li class="{{ (request()->is('admin/teams')) ? 'active' : '' }}"><a
                                 href="{{asset('admin/teams')}}"><span class="fa fa-arrow-right">&nbsp;</span>
                             Quản lý phòng ban </a></li>
-                    {{--<li class="{{ (request()->is('admin/coupons')) ? 'active' : '' }}"><a--}}
-                                {{--href="{{asset('admin/coupons')}}"><span class="fa fa-arrow-right">&nbsp;</span>--}}
-                            {{--Coupons</a></li>--}}
+                    <li class="{{ (request()->is('admin/users')) ? 'active' : '' }}"><a
+                                href="{{asset('admin/users')}}"><span class="fa fa-arrow-right">&nbsp;</span>
+                            Quản lý người dùng</a></li>
                 </ul>
             </li>
         @endif

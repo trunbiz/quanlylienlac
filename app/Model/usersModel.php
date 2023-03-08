@@ -8,10 +8,41 @@ class usersModel extends Model
 {
     //
     protected $table='users';
+    const GROUP_USER = [
+      1 => 'admin',
+      2 => 'Creator',
+      3 => 'Người dùng',
+    ];
+    protected $fillable = [
+      'group_id',
+      'username',
+      'full_name',
+      'email',
+      'phone',
+      'city',
+      'address',
+      'password',
+      'lever',
+      'status',
+      'avatar',
+    ];
+
     public function listAll()
     {
         $item=usersModel::orderBy('created_at','DESC')->get();
         return $item;
+    }
+
+    public function getListAll($params)
+    {
+        $query = usersModel::query();
+        if (!empty($params['search'])) {
+            $query->where('username', 'like', '%' . $params['search'] . '%')
+                ->orWhere('email', 'like', '%' . $params['search'] . '%')
+                ->orWhere('phone', 'like', '%' . $params['search'] . '%')
+                ->orWhere('full_name', 'like', '%' . $params['search'] . '%');
+        }
+        return $query->paginate();
     }
     public function addItem(Request $request)
     {
