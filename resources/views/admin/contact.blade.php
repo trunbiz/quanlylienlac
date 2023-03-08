@@ -46,7 +46,7 @@
                     <tbody>
                     @foreach($items as $item)
                         <tr>
-                            <td>{{$item->team->title}}</td>
+                            <td>{{$item->team->title ?? ''}}</td>
                             <td>{{$item->email}}</td>
                             <td>{{$item->full_name}}</td>
                             <td>{{$item->birthday}}</td>

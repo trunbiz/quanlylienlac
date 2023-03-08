@@ -112,7 +112,7 @@ class ContactController extends Controller
 
     public function templateImport()
     {
-        $header = $this->getHeader();
+        $header = $this->getHeaderTemplate();
         $convenienceService = new ConvenienceService();
         echo $convenienceService->writeDataToCsv($header, []);
         die();
@@ -159,12 +159,12 @@ class ContactController extends Controller
     public function getHeaderTemplate()
     {
         return [
-            'team_title' => 'Phòng ban(id phòng ban)',
+            'team_title' => 'Phong ban(id phong ban)',
             'email' => 'Email',
-            'full_name' => 'Họ tên',
-            'birthday' => 'Ngày sinh',
-            'phone' => 'Số điện thoại',
-            'word_phone' => 'Số điện thoại làm việc',
+            'full_name' => 'Ho ten',
+            'birthday' => 'Ngay sinh (yyyy-mm-dd)',
+            'phone' => 'So dien thoai',
+            'word_phone' => 'So dien thoai lam viec',
             'fax' => 'Fax'
         ];
     }
