@@ -67,8 +67,9 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('store', 'ContactController@showStore');
             Route::post('store', 'ContactController@store');
             Route::get('edit', 'ContactController@showEdit');
-            Route::post('edit', 'ContactController@update');
-            Route::post('delete', 'ContactController@deleteItem');
+            Route::post('update', 'ContactController@update');
+            Route::get('delete', 'ContactController@deleteItem');
+            Route::get('download', 'ContactController@downloadExcel');
         });
 
         Route::group(['prefix' => 'teams'], function (){

@@ -21,7 +21,7 @@
                 <div class="panel-heading">Contact</div>
                 <div class="panel-body">
                     <form method="POST" role="form" enctype="multipart/form-data"
-                          action="{{empty($item) ? asset('admin/store') : asset('admin/update')}}">
+                          action="{{empty($item) ? asset('admin/contacts/store') : asset('admin/contacts/update')}}">
                         {{csrf_field()}}
                         <input class="form-control" placeholder="id" name="id" type="hidden"
                                value="{{isset($item->id)?$item->id:''}}">
@@ -29,7 +29,7 @@
                             <label>Phòng ban</label>
                             <select class="form-control" id="sel1" name="team_id">
                                 @foreach($teams as $team)
-                                    <option value="{{$team->id}}">{{$team->title}}</option>
+                                    <option value="{{$team->id}}" {{(!empty($item) && ($item->team_id == $team->id)) ? 'selected' : ''}}>{{$team->title}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -61,8 +61,8 @@
                         </div>
                         <div class="form-group col-sm-8">
                             <label>Ngày sinh</label>
-                            <input class="form-control" type="text" placeholder="birthday" name="birthday"
-                                   value="{{isset($item->birthday)?$item->birthday:''}}">
+                            <input class="form-control" type="date" placeholder="birthday" name="birthday"
+                                   value="{{isset($item->birthday)? date('Y-m-d', strtotime($item->birthday)):''}}">
                         </div>
                         <div class="form-group col-sm-8">
                             <label>Đỉa chỉ</label>
@@ -71,7 +71,7 @@
                         </div>
                         <br>
                         <div class="col-sm-12">
-                            <button class="btn btn-lg btn-primary">Update</button>
+                            <button class="btn btn-lg btn-primary">{{empty($item) ? 'Thêm mới' : 'Cập nhật'}}</button>
                         </div>
                     </form>
                 </div>

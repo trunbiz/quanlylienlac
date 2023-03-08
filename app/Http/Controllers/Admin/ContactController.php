@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Model\ContactModel;
 use App\Model\TeamModel;
+use App\Services\ConvenienceService;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -20,8 +21,8 @@ class ContactController extends Controller
     public function index(Request $request)
     {
         $request = $request->all();
-        $data['contacts'] = $this->contactModel->listAll($request);
-        return view('admin.index', $data);
+        $data['items'] = $this->contactModel->listAll($request);
+        return view('admin.contact', $data);
     }
 
     public function showStore(Request $request)
@@ -44,13 +45,14 @@ class ContactController extends Controller
             'birthday' => $request['birthday'] ?? null,
         ];
         ContactModel::create($data);
-        return back();
+        return redirect('admin/contacts');
     }
     public function showEdit(Request $request)
     {
         $request = $request->all();
-        $data['contact'] = ContactModel::find($request['id']);
-        return view('admin.storeContact');
+        $data['teams'] = TeamModel::all();
+        $data['item'] = ContactModel::find($request['id']);
+        return view('admin.storeContact', $data);
     }
     public function update(Request $request)
     {
@@ -74,5 +76,43 @@ class ContactController extends Controller
         $request = $request->all();
         ContactModel::find($request['id'])->delete();
         return redirect('admin/contacts');
+    }
+
+    public function downloadExcel(Request $request)
+    {
+        $request = $request->all();
+        $items = $this->contactModel->getAll($request);
+
+        $data = [];
+        $header = $this->getHeader();
+        $convenienceService = new ConvenienceService();
+        foreach ($items as $item)
+        {
+            $data[] = [
+                'team_title' => $item->team->title,
+                'email' => $item->email,
+                'full_name' => $item->full_name,
+                'birthday' => $item->birthday,
+                'phone' => $item->phone,
+                'word_phone' => $item->word_phone,
+                'fax' => $item->fax
+            ];
+        }
+
+        echo $convenienceService->writeDataToCsv($header, $data);
+        die();
+    }
+
+    public function getHeader()
+    {
+        return [
+          'team_title' => 'Phòng ban',
+          'email' => 'Email',
+          'full_name' => 'Họ tên',
+          'birthday' => 'Ngày sinh',
+          'phone' => 'Số điện thoại',
+          'word_phone' => 'Số điện thoại làm việc',
+          'fax' => 'Fax'
+        ];
     }
 }
