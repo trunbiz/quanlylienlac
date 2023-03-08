@@ -83,6 +83,7 @@ class indexController extends Controller
 
     public function profileInfo(Request $request)
     {
+        $data['groupUser'] = usersModel::GROUP_USER;
         $data['item'] = usersModel::find(\Illuminate\Support\Facades\Auth::user()->id);
         return view('admin.profile', $data);
     }

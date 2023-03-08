@@ -67,8 +67,12 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('store', 'ContactController@showStore');
             Route::post('store', 'ContactController@store');
             Route::get('edit', 'ContactController@showEdit');
-            Route::post('edit', 'ContactController@update');
-            Route::post('delete', 'ContactController@deleteItem');
+            Route::post('update', 'ContactController@update');
+            Route::get('delete', 'ContactController@deleteItem');
+            Route::get('download', 'ContactController@downloadExcel');
+            Route::get('import', 'ContactController@showImport');
+            Route::get('template-import', 'ContactController@templateImport');
+            Route::post('import', 'ContactController@importFile');
         });
 
         Route::group(['prefix' => 'teams'], function (){
@@ -78,6 +82,15 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('edit', 'TeamController@showEdit');
             Route::post('update', 'TeamController@update');
             Route::get('delete', 'TeamController@deleteItem');
+        });
+
+        Route::group(['prefix' => 'users'], function (){
+            Route::get('/', 'UserController@index');
+            Route::get('store', 'UserController@showStore');
+            Route::post('store', 'UserController@store');
+            Route::get('edit', 'UserController@showEdit');
+            Route::post('update', 'UserController@update');
+            Route::get('delete', 'UserController@deleteItem');
         });
 
 //        Route::group(['prefix' => 'category'], function () {
